@@ -50,8 +50,25 @@ public class TicTacToe
 
     public boolean  checkWin()
     {
-        // check if game is won
-        return true;
+        // check if game is won for row or col
+        for (int i = 0; i < 3; i++)
+        {
+            // for row
+            if (board.cells[i][0] == currentPlayer && board.cells[i][1] == currentPlayer && board.cells[i][2] == currentPlayer)
+                return true;
+            // for col
+            if (board.cells[0][i] == currentPlayer && board.cells[1][i] == currentPlayer && board.cells[2][i] == currentPlayer)
+                    return true; 
+        }
+        // check if game is won for diagonal
+        if (board.cells[0][0] == currentPlayer && board.cells[1][1] == currentPlayer && board.cells[2][2] == currentPlayer)
+            return true;
+        
+        // check if game is won for anti diagonal
+        if (board.cells[0][2] == currentPlayer && board.cells[1][1] == currentPlayer && board.cells[2][0] == currentPlayer )
+            return true;
+        
+        return false;
     }
 
     public boolean isGameOver()
