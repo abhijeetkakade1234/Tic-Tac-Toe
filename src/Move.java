@@ -1,3 +1,4 @@
+package src;
 public class Move 
 {
     char player;
