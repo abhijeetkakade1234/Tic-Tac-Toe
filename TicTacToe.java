@@ -54,12 +54,18 @@ public class TicTacToe
         return true;
     }
 
-        /**
-     * This method is used to switch the current player.
-     * It checks the current player and switches it to the other player.
-     * If the current player is 'X', it switches to 'O'.
-     * If the current player is 'O', it switches to 'X'.
-     */
+    public boolean isGameOver()
+    {
+        // check if game is over
+        return checkWin();
+    }
+
+    /**
+    * This method is used to switch the current player.
+    * It checks the current player and switches it to the other player.
+    * If the current player is 'X', it switches to 'O'.
+    * If the current player is 'O', it switches to 'X'.
+    */
     public void switchPlayer()
     {
         // switch player
@@ -81,4 +87,4 @@ public class TicTacToe
         moveQueue.clear(); // removes all moves from the move queue
         currentPlayer = 'X'; // switches the current player back to 'X'
     }
-    }
+}
