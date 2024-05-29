@@ -1,4 +1,3 @@
-package src;
 public class Board 
 {
     public void initialize()
