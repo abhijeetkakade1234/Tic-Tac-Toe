@@ -43,9 +43,8 @@ public class TicTacToe
             switchPlayer();
         }
         else
-        {
             System.out.println("Invalid move");
-        }
+        
     }
 
     public boolean  checkWin()

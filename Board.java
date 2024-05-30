@@ -2,7 +2,7 @@ public class Board
 {
     public char[][] cells = new char[3][3];
     /**
-    * Initializes the game board by setting all cells to empty spaces.
+    * Initializes() the game board by setting all cells to empty spaces.
     */
     public void initialize()
     {
