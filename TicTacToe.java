@@ -89,6 +89,8 @@ public class TicTacToe
             currentPlayer = 'O';
         else 
             currentPlayer = 'X';
+        
+        System.out.println(currentPlayer +" turn");
     }
 
     /**

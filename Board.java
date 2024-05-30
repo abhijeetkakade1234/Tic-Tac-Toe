@@ -32,7 +32,11 @@ public class Board
     public void placeMove(int row, int col, char player)
     {
         //place move on board
-        cells[row][col] = player;
+        try
+        {
+            cells[row][col] = player;
+        }
+        catch(ArrayIndexOutOfBoundsException e){}
     }
 
     public void removeMove(int row, int col)
