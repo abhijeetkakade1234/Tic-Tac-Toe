@@ -21,7 +21,9 @@ public class TicTacToe
      * @param row the row index of the move (0-based)
      * @param col the column index of the move (0-based)
      */
-    public void makeMove(int row, int col) {
+    public void makeMove(int row, int col) 
+    {
+        // Fucked up code here
         if (!board.isValidMove(row, col)) {
             System.out.println("Invalid move");
             return;
