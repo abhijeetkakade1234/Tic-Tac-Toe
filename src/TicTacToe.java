@@ -6,6 +6,7 @@ public class TicTacToe
     char currentPlayer;
     Board board;
     Queue<Move> moveQueue;
+
     public TicTacToe() 
     {
         currentPlayer = 'X';
@@ -17,28 +18,34 @@ public class TicTacToe
      * This method is used to make a move in the game.
      * It checks if the move is valid, places the move on the board, adds it to the move queue,
      * checks if the game is won, switches the player, or prints an error message.
-     *
      * @param row the row index of the move (0-based)
      * @param col the column index of the move (0-based)
      */
-    public void makeMove(int row, int col)
-    {
-        // check if move is valid
-        if (board.isCellEmpty(row, col))
-        {
-            if(moveQueue.size() == 3)
-            {
-                Move oldestMove = moveQueue.remove();
-                board.removeMove(oldestMove.row, oldestMove.col);
-            }
-            Move move = new Move(currentPlayer, row, col);
-            board.placeMove(row, col, currentPlayer);
-            moveQueue.add(move);
+    public void makeMove(int row, int col) {
+        if (!board.isValidMove(row, col)) {
+            System.out.println("Invalid move");
+            return;
         }
-        else
-            System.out.println("Invalid move"); 
+        
+        if (!board.isCellEmpty(row, col)) {
+            System.out.println("Cell is occupied");
+            return;
+        }
+        
+        if (moveQueue.size() == 3) {
+            Move oldestMove = moveQueue.poll();
+            board.cells[oldestMove.row][oldestMove.col] = ' ';
+        }
+        
+        board.cells[row][col] = currentPlayer;
+        moveQueue.offer(new Move(currentPlayer, row, col));
     }
 
+    /**
+    * Checks if the current player has won the game by checking for a win in rows, columns, or diagonals.
+    *
+    * @return  true if the current player has won, false otherwise
+    */
     public boolean checkWin()
     {
         // check if game is won for row or col
@@ -47,18 +54,24 @@ public class TicTacToe
             // for row
             if (board.cells[i][0] == currentPlayer && board.cells[i][1] == currentPlayer && board.cells[i][2] == currentPlayer)
                 return true;
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
             // for col
             if (board.cells[0][i] == currentPlayer && board.cells[1][i] == currentPlayer && board.cells[2][i] == currentPlayer)
-                    return true; 
+                return true; 
         }
-        // check if game is won for diagonal
-        if (board.cells[0][0] == currentPlayer && board.cells[1][1] == currentPlayer && board.cells[2][2] == currentPlayer)
-            return true;
-            
-            // check if game is won for anti diagonal
-        return board.cells[0][2] == currentPlayer && board.cells[1][1] == currentPlayer && board.cells[2][0] == currentPlayer;
+
+        // check if game is won for anti diagonal and  check if game is won for diagonal
+        return (board.cells[0][2] == currentPlayer && board.cells[1][1] == currentPlayer && board.cells[2][0] == currentPlayer) || (board.cells[0][0] == currentPlayer && board.cells[1][1] == currentPlayer && board.cells[2][2] == currentPlayer);
     }
 
+    /**
+    * Checks if the game is over by calling the checkWin() method.
+    *
+    * @return  true if the game is over, false otherwise
+    */
     public boolean isGameOver()
     {
         // check if game is over

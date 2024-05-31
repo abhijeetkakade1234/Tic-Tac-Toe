@@ -8,23 +8,18 @@ public class Main
         Scanner sc = new Scanner(System.in);
         Board board = new Board();
         TicTacToe game = new TicTacToe();
-        game.moveQueue.clear();
         board.initialize();
+
+
         System.out.println("Player "+game.currentPlayer+ " Move");
         while(!game.isGameOver())
         {
+            board.printBoard();
             System.out.println("Enter row (0, 1, or 2):");
             int row = sc.nextInt();
             System.out.println("Enter column (0, 1, or 2):");
             int col = sc.nextInt();
 
-            if (!board.isValidMove(row, col)) 
-            {
-                System.out.println("Invalid move, try again.");
-            }
-
-
-            board.placeMove(row, col, game.currentPlayer);
             game.makeMove(row, col);
             
             if (game.checkWin())
@@ -41,7 +36,7 @@ public class Main
                 }
                 else break;
             }
-            game.switchPlayer();
+            else game.switchPlayer();
         }
         sc.close();
     }
