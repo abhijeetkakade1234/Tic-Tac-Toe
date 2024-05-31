@@ -55,12 +55,9 @@ public class TicTacToe
         // check if game is won for diagonal
         if (board.cells[0][0] == currentPlayer && board.cells[1][1] == currentPlayer && board.cells[2][2] == currentPlayer)
             return true;
-        
-        // check if game is won for anti diagonal
-        if (board.cells[0][2] == currentPlayer && board.cells[1][1] == currentPlayer && board.cells[2][0] == currentPlayer )
-            return true;
-        
-        return false;
+            
+            // check if game is won for anti diagonal
+        return board.cells[0][2] == currentPlayer && board.cells[1][1] == currentPlayer && board.cells[2][0] == currentPlayer;
     }
 
     public boolean isGameOver()

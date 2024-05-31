@@ -40,13 +40,13 @@ This is a simple Tic-Tac-Toe game implemented in Java. The game allows two playe
 4. **Switching Players:**
   - The game will automatically switch players after each valid move.
 
-### Classes and Methods
-## Main Class
+## Classes and Methods
+### Main Class
  - Purpose: Manages the overall flow of the game.
  - Key Methods:
      - main(String[] args): Initializes the game, handles player inputs, and manages the game loop.
   
-## Board Class
+### Board Class
   - Purpose: Manages the game board and its state.
   - Key Methods:
     - initialize(): Sets up the board.
@@ -55,7 +55,7 @@ This is a simple Tic-Tac-Toe game implemented in Java. The game allows two playe
     - removeMove(int row, int col): Removes a move from the board.
     - isValidMove(int row, int col): Checks if a move is valid.
    
-## TicTacToe Class
+### TicTacToe Class
 - Purpose: Manages the game logic.
 - Key Methods:
   - getCurrentPlayer(): Returns the current player.
@@ -70,13 +70,11 @@ This is a simple Tic-Tac-Toe game implemented in Java. The game allows two playe
 This `README.md` file provides a concise guide to your Tic-Tac-Toe project's backend logic, including installation instructions, game instructions, class and method descriptions, and contribution guidelines.
 
 ## License
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 For support or inquiries, please email us at abhijeetskakade04@gmail.com.
 <br>
-<img src="img/flowchart.png" alt="FlowChart" height="5000"/>
+<img src="img/flowchart.png" alt="FlowChart" height="600"/>
