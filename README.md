@@ -69,4 +69,14 @@ This is a simple Tic-Tac-Toe game implemented in Java. The game allows two playe
   
 This `README.md` file provides a concise guide to your Tic-Tac-Toe project's backend logic, including installation instructions, game instructions, class and method descriptions, and contribution guidelines.
 
+## License
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+For support or inquiries, please email us at abhijeetskakade04@gmail.com.
+<br>
 <img src="img/flowchart.png" alt="FlowChart" height="5000"/>
