@@ -30,12 +30,6 @@ public class TicTacToe
             board.placeMove(row, col, currentPlayer);
             moveQueue.add(move);
         }
-        // check if game is won
-        if(checkWin())
-        {
-            System.out.println("Player"+ currentPlayer +"Wins!");
-            resetGame();
-        }
         else if(moveQueue.size() >= 3)
         {
             Move oldestMove = moveQueue.remove();
@@ -43,8 +37,7 @@ public class TicTacToe
             switchPlayer();
         }
         else
-            System.out.println("Invalid move");
-        
+            System.out.println("Invalid move"); 
     }
 
     public boolean  checkWin()

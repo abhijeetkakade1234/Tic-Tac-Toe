@@ -25,6 +25,7 @@ public class Board
      */
     public boolean isCellEmpty(int row, int col)
     {
+        // TODO : Add exception handler
         //check if cell is empty
         return cells[row][col] == ' ';
     }
@@ -70,5 +71,10 @@ public class Board
         // Add an extra newline character for better readability
         System.out.println();
     }
-    
+
+    public boolean  isValidMove(int row, int col)
+    {
+        // TODO : Add exception handler
+        return isCellEmpty(row, col);
+    }
 }
