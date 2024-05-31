@@ -21,7 +21,7 @@ This is a simple Tic-Tac-Toe game implemented in Java. The game allows two playe
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/tic-tac-toe.git
+   git clone https://github.com/abhijeetkakade1234/tic-tac-toe.git
    cd tic-tac-toe
 2. **Open the project in your preferred IDE:**
   - Import the project as a Maven project if you are using Maven.
