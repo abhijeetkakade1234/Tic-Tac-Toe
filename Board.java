@@ -25,9 +25,14 @@ public class Board
      */
     public boolean isCellEmpty(int row, int col)
     {
-        // TODO : Add exception handler
         //check if cell is empty
-        return cells[row][col] == ' ';
+        try
+        {
+            return cells[row][col] == ' ';
+        }
+        catch (ArrayIndexOutOfBoundsException e){}
+        catch (Exception e){}
+        return false;
     }
 
     public void placeMove(int row, int col, char player)
@@ -38,6 +43,7 @@ public class Board
             cells[row][col] = player;
         }
         catch(ArrayIndexOutOfBoundsException e){}
+        catch (Exception e){}
     }
 
     public void removeMove(int row, int col)
@@ -72,9 +78,14 @@ public class Board
         System.out.println();
     }
 
-    public boolean  isValidMove(int row, int col)
+    public boolean isValidMove(int row, int col)
     {
-        // TODO : Add exception handler
-        return isCellEmpty(row, col);
+        try
+        {
+            return isCellEmpty(row, col);
+        }
+        catch (ArrayIndexOutOfBoundsException e){}
+        catch (Exception e){}
+        return false;
     }
 }

@@ -26,21 +26,20 @@ public class TicTacToe
         // check if move is valid
         if (board.isCellEmpty(row, col))
         {
+            if(moveQueue.size() == 3)
+            {
+                Move oldestMove = moveQueue.remove();
+                board.removeMove(oldestMove.row, oldestMove.col);
+            }
             Move move = new Move(currentPlayer, row, col);
             board.placeMove(row, col, currentPlayer);
             moveQueue.add(move);
-        }
-        else if(moveQueue.size() >= 3)
-        {
-            Move oldestMove = moveQueue.remove();
-            board.removeMove(oldestMove.row, oldestMove.col);
-            switchPlayer();
         }
         else
             System.out.println("Invalid move"); 
     }
 
-    public boolean  checkWin()
+    public boolean checkWin()
     {
         // check if game is won for row or col
         for (int i = 0; i < 3; i++)
@@ -75,11 +74,7 @@ public class TicTacToe
     public void switchPlayer()
     {
         // switch player
-        if (currentPlayer == 'X') 
-            currentPlayer = 'O';
-        else 
-            currentPlayer = 'X';
-        
+        currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
         System.out.println(currentPlayer +" turn");
     }
 
