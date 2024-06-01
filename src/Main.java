@@ -1,20 +1,23 @@
-
 import java.util.Scanner;
 
+    /**
+     * The main function that runs the Tic Tac Toe game.
+     *
+     * @param  args  the command-line arguments
+     */
 public class Main 
 {
     public static void main(String[] args) 
     {
-        try (Scanner sc = new Scanner(System.in)) {
-            Board board = new Board();
+        try (Scanner sc = new Scanner(System.in)) 
+        {
             TicTacToe game = new TicTacToe();
-            board.initialize();
+            game.board.initialize();  // Ensure the board is initialized
             
-
-            System.out.println("Player "+game.currentPlayer+ " Move");
-            while(true)
+            System.out.println("Player " + game.currentPlayer + " Move");
+            while (true)
             {
-                board.printBoard();
+                game.board.printBoard();
                 System.out.println("Enter row (0, 1, or 2):");
                 int row = sc.nextInt();
                 System.out.println("Enter column (0, 1, or 2):");
@@ -24,14 +27,13 @@ public class Main
                 
                 if (game.checkWin())
                 {
-                    System.out.println(game.currentPlayer+" WON");
+                    System.out.println(game.currentPlayer + " WON");
                     System.out.println("DO YOU WANT TO PLAY NEXT ROUND ");
-                    System.out.println("Press 0 to resart OR any number to QUIT");
+                    System.out.println("Press 0 to restart OR any number to QUIT");
                     int br = sc.nextInt();
-                    if(br == 0)
+                    if (br == 0)
                     {
                         game.resetGame();
-                        board.initialize();
                     }
                     else break;
                 }
