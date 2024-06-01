@@ -27,6 +27,7 @@ public class Main
                 
                 if (game.checkWin())
                 {
+                    game.board.printBoard();
                     System.out.println(game.currentPlayer + " WON");
                     System.out.println("DO YOU WANT TO PLAY NEXT ROUND ");
                     System.out.println("Press 0 to restart OR any number to QUIT");
