@@ -56,15 +56,14 @@ This is a simple Tic-Tac-Toe game implemented in Java. The game allows two playe
     - isValidMove(int row, int col): Checks if a move is valid.
    
 ### TicTacToe Class
-- Purpose: Manages the game logic.
-- Key Methods:
-  - getCurrentPlayer(): Returns the current player.
-  - makeMove(int row, int col): Handles game logic for making a move.
-  - checkWin(): Checks if the current player has won.
-  - isDraw(): Checks if the game is a draw.
-  - resetGame(): Resets the game state.
-  - switchPlayer(): Switches to the next player.
-  - isGameOver(): Determines if the game is over.
+  - Purpose: Manages the game logic.
+  - Key Methods:
+    - getCurrentPlayer(): Returns the current player.
+    - makeMove(int row, int col): Handles game logic for making a move.
+    - checkWin(): Checks if the current player has won.
+    - resetGame(): Resets the game state.
+    - switchPlayer(): Switches to the next player.
+    - isGameOver(): Determines if the game is over.
  
   
 This `README.md` file provides a concise guide to your Tic-Tac-Toe project's backend logic, including installation instructions, game instructions, class and method descriptions, and contribution guidelines.

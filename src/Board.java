@@ -68,7 +68,9 @@ public class Board
      * @param col The column index of the cell to check (0-based).
      * @return {@code true} if the cell is within the board bounds and empty, {@code false} otherwise.
      */
-    public boolean isValidMove(int row, int col) {
-        return 0 <= row && row < 3 && 0 <= col && col < 3 && isCellEmpty(row, col);
+    public boolean isValidMove(int row, int col) 
+    {
+        //check if cell is within the board bounds and empty
+        return row >= 0 && row < 3 && col >= 0 && col < 3 && cells[row][col] == ' ';
     }
 }
