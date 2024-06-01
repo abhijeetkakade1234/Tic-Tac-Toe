@@ -64,8 +64,20 @@ This is a simple Tic-Tac-Toe game implemented in Java. The game allows two playe
     - resetGame(): Resets the game state.
     - switchPlayer(): Switches to the next player.
     - isGameOver(): Determines if the game is over.
- 
-  
+
+## Steps to Run the Code
+  1. Compile all the .java files:
+    ``` bash
+    javac Move.java Board.java TicTacToe.java Main.java
+    ```
+  2. Run the Main class:
+    ``` bash
+    java Main
+    ```
+
+## Demo
+<img src="img/Screenshot.png" alt="FlowChart" height="600"/>
+
 This `README.md` file provides a concise guide to your Tic-Tac-Toe project's backend logic, including installation instructions, game instructions, class and method descriptions, and contribution guidelines.
 
 ## License
