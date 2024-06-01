@@ -27,7 +27,6 @@ public class Board
     {
         //check if cell is empty
         return cells[row][col] == ' ';
-        
     }
 
     public void placeMove(int row, int col, char player)

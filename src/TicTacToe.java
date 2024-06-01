@@ -11,7 +11,7 @@ public class TicTacToe
     {
         currentPlayer = 'X';
         board = new Board();
-        moveQueue = new LinkedList<Move>();  
+        moveQueue = new LinkedList<>();  
     }
     
     /**
@@ -24,12 +24,13 @@ public class TicTacToe
     public void makeMove(int row, int col) 
     {
         // Fucked up code here
-        if (!board.isValidMove(row, col)) {
+        if (board.isValidMove(row, col)) {
             System.out.println("Invalid move");
             return;
         }
         
-        if (!board.isCellEmpty(row, col)) {
+        if (board.isCellEmpty(row, col)) 
+        {
             System.out.println("Cell is occupied");
             return;
         }
