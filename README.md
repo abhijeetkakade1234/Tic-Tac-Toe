@@ -1,4 +1,8 @@
-# Tic-Tac-Toe Game
+<p align="center">
+  <img src="img/Tic-Tac-Toe Game.png" alt="Tic-Tac-Toe image" height="200"/><br>
+  <b>Tic-Tac-Toe Game</b>
+</p>
+
 
 This is a simple Tic-Tac-Toe game implemented in Java. The game allows two players to take turns making moves on a 3x3 grid. The game ensures there is no draw by implementing a rule where the first X or O will be removed if no one wins in three moves.
 
