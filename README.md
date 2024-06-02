@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/Tic-Tac-Toe Game.png" alt="Tic-Tac-Toe image" height="200"/><br>
+  <img src="img/Tic-Tac-Toe Game.jpg" alt="Tic-Tac-Toe image" height="200"/><br>
   <b>Tic-Tac-Toe Game</b>
 </p>
 
