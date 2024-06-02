@@ -75,8 +75,69 @@ This is a simple Tic-Tac-Toe game implemented in Java. The game allows two playe
     java Main
     ```
 
-## Demo
-<img src="img/Screenshot.png" alt="FlowChart" height="600"/>
+## Demo Play
+
+  ``` bash
+Player X Move
+ | | 
+-----
+ | | 
+-----
+ | | 
+Enter row (0, 1, or 2):
+0
+Enter column (0, 1, or 2):
+0
+O turn
+X| | 
+-----
+ | | 
+-----
+ | | 
+Enter row (0, 1, or 2):
+1
+Enter column (0, 1, or 2):
+1
+X turn
+X| | 
+-----
+ |O| 
+-----
+ | | 
+Enter row (0, 1, or 2):
+0
+Enter column (0, 1, or 2):
+1
+O turn
+X|X| 
+-----
+ |O| 
+-----
+ | | 
+Enter row (0, 1, or 2):
+1
+Enter column (0, 1, or 2):
+0
+X turn
+X|X|
+-----
+O|O|
+-----
+ | |
+Enter row (0, 1, or 2):
+0
+Enter column (0, 1, or 2):
+2
+X|X|X
+-----
+O|O|
+-----
+ | |
+X WON
+DO YOU WANT TO PLAY NEXT ROUND
+Press 0 to restart OR any number to QUIT
+```
+
 
 This `README.md` file provides a concise guide to your Tic-Tac-Toe project's backend logic, including installation instructions, game instructions, class and method descriptions, and contribution guidelines.
 
