@@ -83,11 +83,11 @@ This is a simple Tic-Tac-Toe game implemented in Java. The game allows two playe
 
   ``` bash
 Player X Move
- | | 
------
- | | 
------
- | | 
+  | | 
+ -----
+  | | 
+ -----
+  | | 
 Enter row (0, 1, or 2):
 0
 Enter column (0, 1, or 2):
@@ -95,9 +95,9 @@ Enter column (0, 1, or 2):
 O turn
 X| | 
 -----
- | | 
+  | | 
 -----
- | | 
+  | | 
 Enter row (0, 1, or 2):
 1
 Enter column (0, 1, or 2):
@@ -105,9 +105,9 @@ Enter column (0, 1, or 2):
 X turn
 X| | 
 -----
- |O| 
+  |O| 
 -----
- | | 
+  | | 
 Enter row (0, 1, or 2):
 0
 Enter column (0, 1, or 2):
